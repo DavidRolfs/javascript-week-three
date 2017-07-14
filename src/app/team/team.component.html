@@ -1,3 +1,5 @@
-<h1>Team</h1>
-
-<h4>Heres the current roster of our team!</h4>
+<div *ngFor="let skater of skaters | async" (click)="goToDetailPage(skater)" class="panel panel-default">
+  <div class="panel-body">
+    <h3><em>{{skater.name}}</em> ${{skater.age}}</h3>
+  </div>
+</div>
