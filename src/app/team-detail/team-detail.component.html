@@ -1,3 +1,6 @@
-<p>
-  team-detail works!
-</p>
+<div>
+  <h3>name: {{(skaterToDisplay | async)?.name}}</h3>
+  <h4>age: {{(skaterToDisplay | async)?.age}}</h4>
+  <h4>location: {{(skaterToDisplay | async)?.location}}</h4>
+  <p>description: {{(skaterToDisplay | async)?.description}}</p>
+</div>

@@ -20,7 +20,7 @@ export class TeamComponent implements OnInit {
 }
 
   goToDetailPage(clickedSkater) {
-   this.router.navigate(['skaters', clickedSkater.$key]);
+   this.router.navigate(['team', clickedSkater.$key]);
   };
 
 }
