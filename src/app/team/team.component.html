@@ -1,4 +1,11 @@
-<div *ngFor="let skater of skaters | async" class="panel panel-default">
+  <select (change)="onChange($event.target.value)">
+    <option value="Everyone" selected="selected">Entire Team</option>
+    <option value="Up-and-comers">Up-and-comers</option>
+    <option value="Legends">Legends</option>
+  </select>
+
+
+<div *ngFor="let skater of skaters | async | filterAge:filterByAge" class= "panel panel-default">
   <div class="panel-body">
     <h3 (click)="goToDetailPage(skater)"><em>{{skater.name}}</em> {{skater.age}}</h3>
     <div *ngIf="currentRoute === '/admin'">

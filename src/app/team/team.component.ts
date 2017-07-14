@@ -24,4 +24,10 @@ export class TeamComponent implements OnInit {
    this.router.navigate(['team', clickedSkater.$key]);
   };
 
+  filterByAge: string = "Everyone";
+
+  onChange(optionFromMenu) {
+    this.filterByAge = optionFromMenu;
+  }
+
 }
