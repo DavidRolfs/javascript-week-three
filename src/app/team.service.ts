@@ -21,7 +21,17 @@ export class TeamService {
   }
 
   getSkaterById(skaterId: string){
-    return this.database.object('skaters/' + skaterId);
+    return this.database.object('/skaters/' + skaterId);
+  }
+
+  updateSkater(localUpdatedSkater){
+    var skaterEntryInFirebase = this.getSkaterById(localUpdatedSkater.$key);
+    skaterEntryInFirebase.update({name: localUpdatedSkater.name, age: localUpdatedSkater.age, location: localUpdatedSkater.location, sponsors: localUpdatedSkater.sponsors, description: localUpdatedSkater.description});
+    }
+
+  deleteSkater(localSkaterToDelete){
+    var skaterEntryInFirebase = this.getSkaterById(localSkaterToDelete.$key);
+    skaterEntryInFirebase.remove();
   }
 
 }

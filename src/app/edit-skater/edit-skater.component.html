@@ -1,0 +1,25 @@
+<h4>Edit Album</h4>
+
+<label>New Name:</label>
+<input [(ngModel)]="selectedSkater.name">
+<br>
+
+<label>New Age:</label>
+<input [(ngModel)]="selectedSkater.age">
+<br>
+
+<label>New Location:</label>
+<input [(ngModel)]="selectedSkater.location">
+<br>
+
+<label>New Sponsors:</label>
+<input [(ngModel)]="selectedSkater.sponsors">
+<br>
+
+<label>New Description:</label>
+<input [(ngModel)]="selectedSkater.description">
+<br>
+
+<button (click)="beginUpdatingSkater(selectedSkater)">Update</button>
+<hr>
+<button (click)="beginDeletingSkater(selectedSkater)">Delete</button>
