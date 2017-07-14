@@ -57,7 +57,7 @@ rolfs97@yahoo.com
 
 ## Technologies Used
 
-_HTML, CSS, JavaScript, jQuery, Bootstrap, SASS, NodeJS, Angular 2.0, firebase_
+_HTML, CSS, JavaScript, jQuery, Bootstrap, SASS, NodeJS, Angular 2.0, firebase, typescript_
 
 ### License
  This program is licensed under MIT license.
