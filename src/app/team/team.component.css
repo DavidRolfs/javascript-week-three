@@ -1,0 +1,21 @@
+
+.panel-default{
+  background-color: rgba(0, 0, 0, 0);
+  border: none;
+
+}
+
+.panel-body{
+  background-image: url("http://imgs.inkfrog.com/pix/kabicy/89003914-1.jpg");
+  background-color: none;
+  background-repeat: no-repeat;
+  background-size: 400px;
+  padding-top: 25px;
+  padding-bottom: 25px;
+  background-position: center;
+  }
+
+h3{
+  text-align: center;
+  padding-bottom: 18px;
+}

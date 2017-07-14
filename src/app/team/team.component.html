@@ -7,9 +7,15 @@
 
 <div *ngFor="let skater of skaters | async | filterAge:filterByAge" class= "panel panel-default">
   <div class="panel-body">
-    <h3 (click)="goToDetailPage(skater)"><em>{{skater.name}}</em> {{skater.age}}</h3>
+    <h3 (click)="goToDetailPage(skater)"><em>{{skater.name}}</em></h3>
     <div *ngIf="currentRoute === '/admin'">
-      {{skater.location}}
+      age: {{skater.age}}
+      <br>
+      location: {{skater.location}}
+      <br>
+      sponsors: {{skater.sponsors}}
+      <br>
+      description: {{skater.description}}
       <hr>
       <app-edit-skater [selectedSkater]="skater"></app-edit-skater>
     </div>
