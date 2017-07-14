@@ -1,0 +1,39 @@
+<div class="panel panel-default">
+  <div class="panel-heading">
+    <h3>Add New Skater to Hooley</h3>
+  </div>
+  <div class="panel-body">
+    <div>
+      <div>
+        <label>Name:</label>
+        <br>
+        <input #newName>
+      </div>
+
+      <div>
+        <label>Age:</label>
+        <br>
+        <input #newAge>
+      </div>
+
+      <div>
+        <label>Location:</label>
+        <br>
+        <input #newLocation>
+      </div>
+
+      <div>
+        <label>Sponsors:</label>
+        <br>
+        <input #newSponsors>
+      </div>
+
+      <div>
+        <label>Description:</label>
+        <br>
+        <textarea #newDescription></textarea>
+      </div>
+      <button (click)="submitForm(newName.value, newAge.value, newLocation.value, newSponsors.value, newDescription.value); newName.value=''; newDescription.value='';newDescription.value=''; newSponsors.value=''; newLocation.value='';">Add</button>
+    </div>
+  </div>
+</div>
