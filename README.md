@@ -1,28 +1,65 @@
 # JavascriptWeekThree
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.0.0.
+## SkateTeam
 
-## Development server
+####  July 14th, 2017_
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+#### By _**David Rolfs**_
 
-## Code scaffolding
+## Description
+Webpage uses Angular 2.0 cli and firebase to manage a skateboard team webpage. User can view and sort through the team roster as well as view individual profiles. Admin can add, update, and delete team riders in the database.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive/pipe/service/class/module`.
+## Repository
+https://github.com/DavidRolfs/javascript-week-three
 
-## Build
+## Specs
+| Description | input | output |
+| ------------- |:-------------:| -----:|
+|Webpage displays entire team roster stored in firebase| selects team from nav-bar | names of all persons in database are displayed |
+|Webpage has individual pages for each person | click name on team roster list| new page shows individuals name, age, location, sponsors, about |
+| admin can add new team member to database | clicks admin and enters information in form, click update | new rider is added to database|
+| admin can update information | enter admin page and change rider information in form, click update | new information is updated |
+| admin can delete rider from database | enter admin page, click delete next to rider name | rider is deleted from database |
+| user can filter displayed roster by status | user changes select from Everyone to legend | list only displays riders with status of legend |
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `-prod` flag for a production build.
 
-## Running unit tests
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+## Setup/Installation Requirements
+* Make sure npm, node.js, and typescript are installed on your computer.
+* Type _git clone https://github.com/DavidRolfs/javascript-week-three _ into your teminal.
+* Install promise-polyfill patch npm install promise-polyfill --save-exact
+* Create a Firebase account at firebase.google.com.
+* Click Add project.
+* Select 'Add Firebase to your web app' to obtain api keys.
+* In the app folder of this project, create the file 'api-keys.ts'.
+* Create file called _api-keys.ts_ inside of app directory.
+* Paste
+      export var masterFirebaseConfig = {
+      apiKey: "xxxx",
+      authDomain: "xxxx.firebaseapp.com",
+      databaseURL: "https://xxxx.firebaseio.com",
+      storageBucket: "xxxx.appspot.com",
+      messagingSenderId: "xxxx"
+      };
+* Replace the _x_'s with your api keys
+* Go to Database Options and select Rules
+* Change both the ".read", and ".write" properties here to "true"
+* In firebase select Database option.
+* import _sample-skaters.json_ from the home directory into firebase.
+* In the terminal enter npm install bower install ng serve
+* Webpage will be running on `http://localhost:4200/`.
 
-## Running end-to-end tests
+## Known bugs
+admin page background image displays for only half of page.
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-Before running the tests make sure you are serving the app via `ng serve`.
+## Support and contact details
+rolfs97@yahoo.com
 
-## Further help
+## Technologies Used
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+_HTML, CSS, JavaScript, jQuery, Bootstrap, SASS, NodeJS, Angular 2.0, firebase_
+
+### License
+ This program is licensed under MIT license.
+
+Copyright (c) 2017 **_David Rolfs_**
